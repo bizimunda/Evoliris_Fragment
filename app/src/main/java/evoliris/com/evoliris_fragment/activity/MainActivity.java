@@ -42,6 +42,7 @@ public class MainActivity extends ActionBarActivity {
                 FragmentManager fm=getSupportFragmentManager();
                 FragmentTransaction transaction=fm.beginTransaction();
                 transaction.replace(R.id.ll_main_container, new HomeFragment());
+                transaction.addToBackStack("toToHome");
                 transaction.commit();
             }
         });
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity {
                 FragmentManager fm=getSupportFragmentManager();
                 FragmentTransaction transaction=fm.beginTransaction();
                 transaction.replace(R.id.ll_main_container, new AboutFragment());
+                transaction.addToBackStack("toToAbout");
                 transaction.commit();
             }
         });
